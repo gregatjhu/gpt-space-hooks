@@ -53,6 +53,12 @@ class History(unittest.TestCase):
         return {'expected_sha256':h.checksum(h.raw_read(q.path)),
                 'expected_revision':q.state()['revision']}
 
+    def missing_history_error(self):
+        # Windows rejects the missing path during private ACL validation first.
+        if qmod.os.name == 'nt':
+            return self.assertRaisesRegex(ValueError, 'Windows ACL check failed')
+        return self.assertRaises(OSError)
+
     def schema2(self):
         logical = self.q.state()
         logical['publications'] = {'kept':{'markdown':'exact text\n'+'x'*10000,'state':'published'}}
@@ -111,7 +117,7 @@ class History(unittest.TestCase):
         raw = obj.read_bytes(); obj.write_bytes(raw+b'x')
         with self.assertRaisesRegex(ValueError,'size/hash'): self.q.state()
         obj.write_bytes(raw); obj.unlink()
-        with self.assertRaises(OSError): self.q.state()
+        with self.missing_history_error(): self.q.state()
         with self.assertRaisesRegex(ValueError,'reference'):
             h.get(self.q.root,{'sha256':'../../escape','bytes':1})
 
@@ -240,7 +246,7 @@ class History(unittest.TestCase):
         physical = json.loads(h.raw_read(self.q.path))
         ref = next(iter(physical['publications'].values()))
         h.object_path(self.q.root,ref).unlink()
-        with self.assertRaises(OSError): h.verify(q)
+        with self.missing_history_error(): h.verify(q)
 
     def test_successor_cycle_and_lost_claim_are_refused(self):
         self.grant(); q = self.successor()
