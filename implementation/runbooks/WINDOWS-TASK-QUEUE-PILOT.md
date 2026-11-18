@@ -10,6 +10,8 @@ The queue installer uses PowerShell for NTFS access control and encoded hook com
 
 Windows folder routes also compare case and slash styles using native lexical path rules, including trailing separators. A case variant must not fall through from an assigned project queue to the personal queue. Directory boundaries remain strict and overlapping normalized routes remain ambiguous. This matching does not read the hook payload's working folder or transcript path; POSIX matching is unchanged.
 
+Missing immutable-history objects fail closed on both platforms. Native Windows rejects a missing object during private-ACL validation with `ValueError`; POSIX reports an `OSError` when checking/opening the missing path. The history regressions check these platform-specific failures, including retained predecessor publications, without changing either runtime adapter.
+
 ## Native preflight, tests and upgrade
 
 Use an existing approved native Python 3.11+ and local NTFS Codex home owned by the current user. Identify desktop-bundled and PATH CLI versions separately. No policy bypass, privilege elevation, ownership takeover, trust-store edits or automatic dependency installation. Named meeting zones require an IANA timezone database; if missing, report that prerequisite or use an already approved Python with `tzdata`. Do not substitute a fixed EST offset for America/New_York.
