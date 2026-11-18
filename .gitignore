@@ -1,0 +1,27 @@
+# Private operator evidence stays local; only the source allowlist is versioned.
+/acceptance/
+/catchup/
+/handoffs/
+/implementation/*
+!/implementation/PACKAGE.md
+!/implementation/VERSION
+!/implementation/install.py
+!/implementation/test_checkpoint.py
+!/implementation/test_platform_io.py
+!/implementation/runbooks/
+!/implementation/build_package.py
+!/implementation/work-checkpoint/
+__pycache__/
+*.pyc
+
+/public-release/
+/gpt-space-hooks-plugin.zip
+!/implementation/LICENSE
+
+!/implementation/test_project_scope.py
+!/implementation/install_task_queue.py
+!/implementation/test_task_queue.py
+!/implementation/task-queue/
+!/implementation/windows_queue_pilot.py
+
+!/implementation/test_queue_history.py

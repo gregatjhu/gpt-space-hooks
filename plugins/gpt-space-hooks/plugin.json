@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gpt-space-hooks",
+  "version": "0.1.0",
+  "description": "Guidance for work checkpoints and task queue handoffs in approved ChatGPT Spaces.",
+  "license": "MIT",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "GPT Space Hooks",
+        "shortDescription": "Checkpoints and task queues",
+        "longDescription": "Prepare checkpoints, resume from verified evidence, and propose task handoffs using explicitly assigned Spaces and queues.",
+        "category": "Productivity",
+        "capabilities": ["Interactive"],
+        "defaultPrompt": "Help me prepare a checkpoint or resume work from an assigned Space."
+      }
+    }
+  }
+}
