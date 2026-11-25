@@ -1,0 +1,15 @@
+{
+  "name": "gpt-space-hooks-marketplace",
+  "interface": {
+    "displayName": "GPT Space Hooks"
+  },
+  "plugins": [
+    {
+      "name": "gpt-space-hooks",
+      "source": {
+        "source": "local",
+        "path": "./plugins/gpt-space-hooks"
+      }
+    }
+  ]
+}
