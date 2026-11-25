@@ -19,6 +19,20 @@ Give each participant only its assigned routes:
 
 Personal coordination stays private. A project session receives its project routes and approved audience only. A private mirror may link to a canonical project task; it never duplicates execution. Exclude credentials, applicant details, raw prompts/transcripts and unrelated personal context from all publications. Reuse existing destinations and reminder IDs. Missing access, tools or bindings are explicit gaps, not reasons to create replacement Spaces or a second arbiter.
 
+## Capabilities by step
+
+| Step | Required for this step | Fallback or optional capability |
+| --- | --- | --- |
+| Prepare a checkpoint or proposal | Reviewed skill, explicit route and scope, verified workstream identity, and source evidence | Return a sanitized draft where publication or identity checks are incomplete |
+| Read current Spaces state | Native Page read and child listing, approved access, and complete coverage of the relevant snapshot and amendments | User-supplied evidence can support a draft with its observation date |
+| Publish and verify | Native Page create and full content readback, effective audience verification, and the designated publisher or arbiter with its helper for authoritative receipts | Retain the original pending record for the authorized bridge |
+| Direct chat delivery | Native Codex send-message capability in the sending chat, a verified existing destination, and explicit user authorization | Chat discovery or status tools can help verify the destination and receipt. A verified Page proposal or copyable handoff can carry the same operation ID |
+| Claim and execute | Current authoritative store and sole arbiter, reconciled amendments, independent authority, satisfied dependencies, and current claim | Leave the proposal pending until the arbiter can verify it |
+| Local hook automation | Supported runtime, OS Python and permissions, and normal hook trust | Load the appropriate skill and perform the same checks manually |
+| Additional services | A specific task may require a scheduler, repository tools, or an artifact transfer service | Keep scheduling, repository evidence and actual artifact download verifications separate |
+
+Install the skills where the workflow is needed. Check effective capabilities in each sending chat before choosing a delivery path. [Direct chat delivery rules](../task-queue/references/protocol.md#direct-chat-delivery)
+
 ## Copyable Dot handoff
 
 Replace the angle-bracket fields and remove unassigned routes:
@@ -34,6 +48,8 @@ Read the newest applicable checkpoints and queue snapshot, keeping source observ
 For a new action, create an immutable child titled "Task queue proposal — <scope> — <action> — <UTC capture time>" under the assigned queue. Include the stable task/operation IDs, source links, intended consumer, acceptance criteria, timing/conditions, independent authority and the last observed queue/task revisions. Existing tasks/reminders retain their IDs. Never label a proposal an authoritative snapshot or invent a revision. Verify saved content, parent and effective audience; reconcile unknown outcomes before retrying.
 
 A proposal is pending until the designated arbiter returns a linked receipt. Local hooks do not fetch or ingest Space Pages, wake idle sessions or schedule reminders. The local reader must explicitly read and reconcile the proposal. Do not claim acknowledgment, acceptance, scheduling, notification or completion from a Page write. When pickup is absent, return the proposal link and exact gap through this conversation; do not message sessions, create timers or duplicate work without separate authorization.
+
+If the user directly authorizes chat delivery and native Codex send-message is available, verify the receiving chat and host, then send the approved handoff with the existing task and operation IDs. Record submission separately from receipt and queue acceptance. If the tool, destination or authorization is missing, return the Page link or a copyable handoff here.
 
 Publish sanitized checkpoints at material milestones, blockers, decisions and handoff. Keep personal notes private and project facts project-safe. Report actual read/create/edit capabilities separately; native creation can support immutable handoffs even when editing is unavailable. Checkpoint publication, consumption and task dispatch are separate outcomes.
 ```

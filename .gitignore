@@ -16,6 +16,7 @@ __pycache__/
 
 /public-release/
 /gpt-space-hooks-plugin.zip
+/plugins/dist/
 !/implementation/LICENSE
 
 !/implementation/test_project_scope.py

@@ -61,6 +61,12 @@ After an unknown creation outcome, use `uncertain-publication`; enumerate childr
 
 When Page tools are missing, hand the original operation proposal to the designated authorized arbiter through the user's approved path. Do not mutate an authoritative queue copy in a cloud filesystem. Proposals contain the expected task revision and stable operation ID; the arbiter verifies actor/source/authorization and current human requests before applying. For project collaborators, resolve their real native principal and destination access first. Record request, supported notification receipt, acknowledgment, acceptance and completion separately. This connector exposes no verified tagging notification operation: supply a manual project-safe link/handoff and leave notification unverified. No test assignments to live collaborators.
 
+## Direct chat delivery
+
+Direct chat delivery is optional transport for an existing handoff. It requires an authenticated native Codex send-message tool exposed to the sending chat, the verified destination chat ID and host when applicable, and explicit authorization from the human user to send that handoff. A Dot room ID, proposal, coordinator request or visible connector does not establish those requirements. Resolve the destination through supported chat discovery or a verified existing reference. Send only the approved audience-safe summary and its task ID, operation ID, expected task revision when applicable, and proposal or evidence link. Keep claim tokens out of coordination prompts.
+
+Record the submitted prompt separately from destination receipt, consumer acknowledgment, acceptance and a current executable claim. If the send outcome is unknown, reconcile through supported destination evidence before retrying. A missing tool, destination or authorization leaves direct delivery pending. Return the existing proposal link or a copyable handoff and continue other authorized work. Preserve the stable operation ID across channels and leave the designated arbiter in charge of queue transitions.
+
 ## Cloud bootstrap
 
 Append to an authorized cloud task or reviewed repository AGENTS instructions:
